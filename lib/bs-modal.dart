@@ -1,7 +1,7 @@
 library bs.modal;
 
-import 'package:polymer/polymer.dart';
 import 'dart:html';
+import 'package:polymer/polymer.dart';
 
 @CustomTag("bs-modal")
 class BootstrapModal extends PolymerElement {

@@ -13,7 +13,7 @@ _onReady(dynamic value) {
 @CustomTag("test-app")
 class TestApp extends PolymerElement {
 
-	TestApp.created(): super.created();
+	TestApp.created() : super.created();
 
 	@observable bool dialogOpen = false;
 
