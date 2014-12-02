@@ -12,4 +12,4 @@ transformers:
     entry_points:
     - web/index.html
     inline_stylesheets:
-      web/css/bootstrap.min.css: false
+      packages/bootstrap/css/bootstrap.min.css: false

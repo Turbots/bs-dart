@@ -5,15 +5,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>index</title>
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="packages/bootstrap/css/bootstrap.min.css">
 		<link rel="import" href="bs-modal.html">
 	</head>
 	<body>
 		<polymer-element name="test-app">
 			<template>
+				<link rel="stylesheet" href="packages/bootstrap/css/bootstrap.min.css">
 				<bs-modal open="{{dialogOpen}}" on-backgroundtap="{{closeDialog}}">
 					<div class="modal-header">
-						<button on-tap="{{closeDialog}}" type="button" class="close" aria-hidden="true">&times;</button>
+						<button on-tap="{{closeDialog}}" type="button" class="close">X</button>
 						<h4 class="modal-title">Modal Title</h4>
 					</div>
 					<div class="modal-body">
@@ -24,12 +25,17 @@
 						<button type="button" on-tap="{{closeDialog}}" class="btn btn-primary">Save changes</button>
 					</div>
 				</bs-modal>
-				<h2>Polymer-Bootstrap modal example</h2>
-				This is meant to work with vanilla versions of browsers, i.e. no strict shadowDOM enforcement.
-				In other words, this relies on bootstrap global styles bleeding through to our web components.
-				<br/>
-				<br/>
-				<button on-tap="{{open}}" class="btn btn-default">Open Dialog</button>
+				<div class="jumbotron">
+                	<h1>Polymer-Bootstrap Modal Dialog for <b>Dart</b></h1>
+               		<p>
+               			The dependency on Bootstrap itself can be removed if you have your own Bootstrap Theme in your project.
+						Make sure to replace all references to this .css (in index.html and bs-modal.html) with your own.
+					</p>
+					<p>
+						The trickiest part is that you need to include the stylesheet in every <i>polymer-element</i>, since <i>apply-author-styles</i> is deprecated.
+					</p>
+					<button on-tap="{{open}}" class="btn btn-default">Open Dialog</button>
+				</div>
 			</template>
 		</polymer-element>
 		<test-app></test-app>
