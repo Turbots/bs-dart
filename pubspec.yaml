@@ -5,8 +5,8 @@ description: Bootstrap Modal polymer element in Dart
 homepage: https://github.com/Turbots/bs-modal-dart
 documentation: https://github.com/Turbots/bs-modal-dart/blob/master/README.md
 dependencies:
-  bootstrap: any
-  polymer: any
+    polymer: ">=0.15.1+5 <0.16.0"
+    bootstrap: ">=3.3.0+4 <4.0.0"
 transformers:
 - polymer:
     entry_points:
